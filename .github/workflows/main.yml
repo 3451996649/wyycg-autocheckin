@@ -32,5 +32,5 @@ jobs:
           QQKEY: ${{ secrets.QQKEY }}
           PPKEY: ${{ secrets.PPKEY }}
         run: |
-      #    python main.py $COOKIES $TELEID $TELETOKEN $SCKEY $QQKEY $PPKEY
+          python main.py $COOKIES $TELEID $TELETOKEN $SCKEY $QQKEY $PPKEY
           python \qinglong\qinglong.py $COOKIES
