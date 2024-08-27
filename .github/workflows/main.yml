@@ -2,9 +2,7 @@ name: Auto Checkin
 
 on:
   schedule:
-    - cron: '59 9 * * *' # 每天9:59运行
-    - cron: '0 10 * * *' # 每天10:00运行
-    - cron: '1 10 * * *' # 每天10:01运行
+    - cron: '0 2 * * *' # 每天10:00运行
 
 jobs:
   auto-checkin-job:
@@ -27,7 +25,7 @@ jobs:
       # 如果你的脚本需要特定的环境变量，请在这里设置
       - name: Run the checkin script
         env:
-          COOKIE: ${{ secrets.COOKIE }}
+          COOKIES: ${{ secrets.COOKIES }}
           TELEID: ${{ secrets.TELEID }}
           TELETOKEN: ${{ secrets.TELETOKEN }}
           SCKEY: ${{ secrets.SCKEY }}
